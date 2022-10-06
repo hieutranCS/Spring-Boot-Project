@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <div class="card-body" th:fragment="viewEmployee" th:object="${employee}">
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Full Name</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{fullName}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Email</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{email}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Phone</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{phone}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Birthday</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{birthday}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Gender</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{gender}"></div>
+    </div>
+  </div>
+  <div class="card-body" th:fragment="viewEmployee2" th:object="${employee}">
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Employee Type</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{type}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Date Hire</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{dateHire}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Title</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{title}"></div>
+    </div>
+  </div>
+
+  <div class="card-body" th:fragment="viewDepartment" th:object="${department}">
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Department Name</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{departmentName}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Supervisor</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{supervisor}"></div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-sm-3">
+        <h6 class="mb-0">Position</h6>
+      </div>
+      <div class="col-sm-9" th:text="*{position}"></div>
+    </div>
+
+    <br />
+  </div>
+
+  <div class="card-body" th:fragment="viewAddress" th:object="${address}">
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="fs-4" th:text="Address"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-0" th:text="*{street}"></div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="mb-0" th:text="*{city}"></div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div th:text="*{state}"></div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="mb-0" th:text="*{zipcode}"></div>
+      </div>
+    </div>
+  </div>
+</html>
