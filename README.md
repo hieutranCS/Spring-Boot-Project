@@ -14,4 +14,3 @@ A Spring boot web application application that lets you add, delete, edit and up
 - VSCode
 - Dbeaver
 - JavaScript
-
