@@ -5,7 +5,7 @@
 
 A Spring boot web application application that lets you add, delete, edit and update employees in different departments for enterprise needs and contact info.
 
-# Tools and technologies used:
+# Tools and Technologies used:
 
 - Java 11
 - Spring Boot
@@ -15,3 +15,4 @@ A Spring boot web application application that lets you add, delete, edit and up
 - VSCode
 - Dbeaver
 - JavaScript
+
