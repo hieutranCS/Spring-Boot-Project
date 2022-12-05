@@ -1,4 +1,4 @@
-# Spring Boot Security System using Spring Boot Security, Thymeleaf and MySQL database.
+# Spring Boot Bank System using Spring Boot Security, Thymeleaf and MySQL database.
 
 # Project Overview
 
