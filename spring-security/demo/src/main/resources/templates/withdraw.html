@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+
+          <th:block th:include="/_header"></th:block>
+
+</head>
+<body>
+    <th:block th:include="/account::statementHeader"></th:block>
+
+<div class="container">
+    <div class="row col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Withdraw</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" role="form" th:action="@{/account/withdraw/save}" th:object="${transaction}">
+
+                    <div class="col-lg-4 mb-3">
+                        <div class="balance status">
+                            <h5>Balance</h5>
+                            <td th:text="${#numbers.formatCurrency(transaction.balance)}"></td>
+                        </div>
+                     </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Withdraw Amount</label>
+                        <input class="form-control"
+                               id="amount"
+                               name="amount"
+                               placeholder="Enter amount"
+                               th:field="*{amount}"
+                               type="text"
+                        />
+                        <p th:errors="*{amount}" class="text-danger"
+                           th:if="${#fields.hasErrors('amount')}">
+                        </p>
+                    </div>
+
+                    <input type="hidden" th:field="*{balance}">
+                    <input type="hidden" th:field="*{accountNumber}">
+
+                  
+                   
+
+                    <div class="form-group mb-3">
+                        <button class="btn btn-primary" type="submit">Withdraw</button>
+                        <span> 
+                            <a class="btn btn-primary" role="button" th:href="@{/user}">Cancel</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+</body>
+</html>

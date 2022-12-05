@@ -1,0 +1,16 @@
+
+
+
+.user-view-table td:first-child {
+    width: 10rem;
+}
+
+
+.container{
+	margin-top: 20px;
+	width: 40em;
+}
+
+.btn{
+	margin-top: 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<th:block th:include="/_header"></th:block>
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" th:href="@{/css/admin.css}" />
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Spring Boot Banking System</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" th:href="@{/employee}">Home</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h1 class="text-center">
+			All Existing User Accounts
+		</h1>
+
+		<table class="table table-striped table-bordered table-hover">
+			<thead class="table-dark">
+				<tr>
+					<th style="width:10%">Name</th>
+					<th style="width:10%">Email</th>
+					<th style="width:10%">Account Balance</th>
+					<th style="width:10%">Account Number</th>
+					<th style="width:10%">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user: ${user}">
+					<td th:text="${user.name}"></td>
+					<td th:text="${user.email}"></td>
+					<td th:text="${user.accountBalance}"></td>
+					<td th:text="${user.accountNumber}"></td>
+					<td>
+						<a th:href="@{/employee/account/delete/{number}(number=${user.accountNumber}) }"
+							class="btn btn-danger">Delete</a>
+
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+		integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
