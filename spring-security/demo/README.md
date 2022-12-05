@@ -2,10 +2,11 @@
 
 # Project Overview
 
-This is a bank application using spring boot security. 
+This is a bank application demo that demonstrates the use of SecurityFilterChain, REST services with Spring, AuthenticationSuccessHandler, AuthenticationFailureHandler.
+<br>
 There are three roles: <br>
 Employee role is able to check on user account as well as edit and delete user information.<br>
-User role is able to create multiple bank accounts. They can deposit or withdraw money from the account, and able to edit personal information.<br>
+User role is able to create multiple bank accounts, deposit or withdraw money from the account, and able to edit personal information.<br>
 Admin role is able to add new employee, and delete or edit employee information. It also able to perform edit and delete on user account.
 
 # Tools and Technologies used:
